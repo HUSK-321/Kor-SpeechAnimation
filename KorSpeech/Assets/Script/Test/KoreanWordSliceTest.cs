@@ -6,7 +6,7 @@ namespace KorSpeech.Test
 {
     public class KoreanWordSliceTest : MonoBehaviour
     {
-        IWordToPronunce wordToPronunce = new SliceKorWord();
+        private IWordToPronunce wordToPronunce = new KoreanToPronunce();
 
         [ContextMenu("Check Korean Word Slice")]
         public void TestKoreanWordSlice()
@@ -16,6 +16,8 @@ namespace KorSpeech.Test
             KoreanSliceAndLogSuccess("뷁", "ㅂㅞㄺ", 1);
             KoreanSliceAndLogSuccess("아니 진짜", "ㅇㅏㄴㅣ ㅈㅣㄴㅉㅏ", 1);
             KoreanSliceAndLogSuccess("영eng어", "ㅇㅕㅇㅇㅓ", 1);
+            KoreanSliceAndLogSuccess("영eng어%", "ㅇㅕㅇㅇㅓ", 1);
+            KoreanSliceAndLogSuccess("이건 어떨까\n", "ㅇㅣㄱㅓㄴ ㅇㅓㄸㅓㄹㄲㅏ", 1);
         }
 
         private void KoreanSliceAndLogSuccess(string lhs, string rhs, int testNum)

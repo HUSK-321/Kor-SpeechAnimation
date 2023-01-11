@@ -3,7 +3,7 @@ using KorSpeech.Translate.KoreanData;
 
 namespace KorSpeech.Translate
 {
-    public class SliceKorWord : IWordToPronunce
+    public class KoreanToPronunce : IWordToPronunce
     {
         private readonly int KOR_UNICODE_START = 0xAC00;  
         private readonly int KOR_UNICODE_END = 0xD7AF;
