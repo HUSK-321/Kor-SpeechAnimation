@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using KorSpeech.Translate;
+using KorSpeech.TTSUtils;
 
 namespace KorSpeech.UI
 {
@@ -12,20 +13,19 @@ namespace KorSpeech.UI
         private TMP_InputField koreanInputField;
         [SerializeField]
         private TextMeshProUGUI outpuTextField;
+        [SerializeField]
+        private TTS googleTTS;
 
         private void Awake()
         {
-            koreanInputField = GetComponent<TMP_InputField>();
+            koreanInputField = GetComponentInChildren<TMP_InputField>();
+            outpuTextField = GetComponentInChildren<TextMeshProUGUI>();
+            googleTTS = GetComponent<GoogleTTS>();
         }
 
-        private void Start()
+        public void SubmitToGoogleTTS()
         {
-            koreanInputField.onSubmit.AddListener(SubmitKorean);
-        }
-
-        public void SubmitKorean(string text)
-        {
-            outpuTextField.text = wordToPronunce.StringToPronunciation(text);
+            googleTTS.PlayTTSAudio(koreanInputField.text, () => {});
         }
     }
 }
