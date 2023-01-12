@@ -35,7 +35,8 @@ namespace KorSpeech.Translate
             int mid  = (indexGap - (first * 21 * 28)) / 28;
             int end   = indexGap - (first * 21 * 28) - (mid * 28) - 1;
 
-            array.Append(KoreanSeong.firstSeong[first]);
+            if(first != 11) // 'ㅇ' 은 제거하기
+                array.Append(KoreanSeong.firstSeong[first]);
             array.Append(KoreanSeong.midSeong[mid]);
 
             if(end >= 0)

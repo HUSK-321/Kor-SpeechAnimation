@@ -13,6 +13,6 @@ namespace KorSpeech.TTSUtils
             TTSAudioClip = GetComponent<AudioSource>();
         }
 
-        public abstract void PlayTTSAudio(string text, Action callack);
+        public abstract void PlayTTSAudio(string text, Action<string> callack, string callbackParameter);
     }
 }

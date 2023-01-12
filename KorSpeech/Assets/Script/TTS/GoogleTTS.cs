@@ -8,12 +8,12 @@ namespace KorSpeech.TTSUtils
     {
         private readonly string googleTTsPrefix = "https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=";
         private readonly string googleTTsSuffix = "&tl=Ko";
-        public override void PlayTTSAudio(string text, Action callback)
+        public override void PlayTTSAudio(string text, Action<string> callback, string callbackParameter)
         {
-            StartCoroutine(DownloadTTSFromGoogle(text, callback));
+            StartCoroutine(DownloadTTSFromGoogle(text, callback, callbackParameter));
         }
 
-        IEnumerator DownloadTTSFromGoogle(string text, Action callback)
+        IEnumerator DownloadTTSFromGoogle(string text, Action<string> callback, string callbackParameter)
         {
             string googleUrl = googleTTsPrefix + text + googleTTsSuffix;
             WWW www = new WWW(googleUrl);
@@ -22,12 +22,7 @@ namespace KorSpeech.TTSUtils
             
             TTSAudioClip.clip = www.GetAudioClip(false, true, AudioType.MPEG);
             TTSAudioClip.Play();
-        }
-
-        [ContextMenu("Play TTS")]
-        public void PlayTTS()
-        {
-            PlayTTSAudio("이게 된다 안된다 내 마음을 걸지", () => { TTSAudioClip.Play(); });
+            callback(callbackParameter);
         }
     }
 }

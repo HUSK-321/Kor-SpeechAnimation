@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using KorSpeech.Translate;
 using KorSpeech.TTSUtils;
+using KorSpeech.LipAnimator;
 
 namespace KorSpeech.UI
 {
@@ -15,6 +16,8 @@ namespace KorSpeech.UI
         private TextMeshProUGUI outpuTextField;
         [SerializeField]
         private TTS googleTTS;
+        [SerializeField]
+        private AnimatorLipShaper lipShaper;
 
         private void Awake()
         {
@@ -25,9 +28,9 @@ namespace KorSpeech.UI
 
         public void SubmitToGoogleTTS()
         {
-            Debug.Log($"{wordToPronunce.StringToPronunciation(koreanInputField.text)}");
-            outpuTextField.text = wordToPronunce.StringToPronunciation(koreanInputField.text);
-            googleTTS.PlayTTSAudio(koreanInputField.text, () => {});
+            string inputToPronunce = wordToPronunce.StringToPronunciation(koreanInputField.text);
+            outpuTextField.text = inputToPronunce;
+            googleTTS.PlayTTSAudio(koreanInputField.text, lipShaper.StartLipShapeAnimation, inputToPronunce);
         }
     }
 }
