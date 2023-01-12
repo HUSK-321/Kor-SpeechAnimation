@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   koreanInputField: {fileID: 0}
-  outpuTextField: {fileID: 0}
+  outpuTextField: {fileID: 460854995}
   googleTTS: {fileID: 305179452}
   lipShaper: {fileID: 1498951718}
 --- !u!1 &460854993
@@ -685,8 +685,8 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -767,7 +767,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -150, y: 100}
-  m_SizeDelta: {x: 600, y: 150}
+  m_SizeDelta: {x: 1000, y: 150}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &649276357
 MonoBehaviour:
@@ -942,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: 0}
+  m_AnchoredPosition: {x: 1100, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &790058799
@@ -1252,8 +1252,8 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1358,6 +1358,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.263482
       objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99975264
+      objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.022242656
+      objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6607683116499372654, guid: b211f06c71459b2499aefb367e304f44, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: -0.006902933
@@ -1425,6 +1445,26 @@ PrefabInstance:
     - target: {fileID: 8648882755762834919, guid: b211f06c71459b2499aefb367e304f44, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.45583
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648882755762834919, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999678
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648882755762834919, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648882755762834919, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648882755762834919, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.008028066
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648882755762834919, guid: b211f06c71459b2499aefb367e304f44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: b211f06c71459b2499aefb367e304f44, type: 3}
@@ -1631,7 +1671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350366a693cdd07479f0b58c83eafed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oneCharDuration: 0.08
+  oneCharDuration: 0.06
   anim: {fileID: 0}
 --- !u!1 &1747796829
 GameObject:

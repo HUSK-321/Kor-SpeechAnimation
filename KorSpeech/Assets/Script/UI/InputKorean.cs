@@ -22,7 +22,6 @@ namespace KorSpeech.UI
         private void Awake()
         {
             koreanInputField = GetComponentInChildren<TMP_InputField>();
-            outpuTextField = GetComponentInChildren<TextMeshProUGUI>();
             googleTTS = GetComponent<GoogleTTS>();
         }
 

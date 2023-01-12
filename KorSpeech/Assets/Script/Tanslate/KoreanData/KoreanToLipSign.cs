@@ -57,14 +57,18 @@ namespace KorSpeech.Translate.KoreanData
 
             {'ㄳ', "Origin"},
             {'ㄵ', "Origin"},
+            {'ㄶ', "Origin"},
+            {'ㄺ', "Origin"},
+            {'ㄻ', "Origin"},
             {'ㄼ', "Origin"},
             {'ㄽ', "Origin"},
             
             {'ㄾ', "Origin"},
+            {'ㅀ', "Origin"},
             {'ㅄ', "Origin"},
             // 어말 끝에서 이럼
-            {'ㄺ', "Origin"},
-            {'ㄻ', "Origin"},
+            // {'ㄺ', "Origin"},
+            // {'ㄻ', "Origin"},
             {'ㄿ', "Origin"},
 
             {' ', "Origin"}
