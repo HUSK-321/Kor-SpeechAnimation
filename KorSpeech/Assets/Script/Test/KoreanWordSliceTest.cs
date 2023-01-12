@@ -1,6 +1,5 @@
 using UnityEngine;
 using KorSpeech.Translate;
-using System.Text;
 
 namespace KorSpeech.Test
 {
@@ -24,8 +23,7 @@ namespace KorSpeech.Test
 
         private void KoreanSliceAndLogSuccess(string lhs, string rhs)
         {
-            var testString = wordToPronunce.StringToPronunciation(lhs);
-            bool testSuccess = TestFunction.IsSame<string>(testString, rhs);
+            bool testSuccess = lhs.Equals(rhs);
             Debug.Log($"Is test{testNum++} success : {testSuccess}");
         }
     }
