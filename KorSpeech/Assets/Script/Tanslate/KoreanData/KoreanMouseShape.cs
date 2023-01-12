@@ -4,60 +4,60 @@ namespace KorSpeech.Translate.KoreanData
 {
     public class KoreanMouseShape
     {
-        public static readonly Dictionary<char, bool> CloseMouse = new Dictionary<char, bool>()
+        public static readonly Dictionary<char, string> CloseMouse = new Dictionary<char, string>()
         {
-            {'ㄱ', false},
-            {'ㄴ', false},
-            {'ㄷ', false},
-            {'ㄹ', false},
-            {'ㅁ', true},
+            {'ㄱ', "Origin"},
+            {'ㄴ', "Origin"},
+            {'ㄷ', "Origin"},
+            {'ㄹ', "Origin"},
+            {'ㅁ', "Close"},
 
-            {'ㅂ', true},
-            {'ㅅ', false},
-            {'ㅇ', false},
-            {'ㅈ', false},
-            {'ㅊ', false},
+            {'ㅂ', "Close"},
+            {'ㅅ', "Origin"},
+            {'ㅇ', "Origin"},
+            {'ㅈ', "Origin"},
+            {'ㅊ', "Origin"},
 
-            {'ㅋ', false},
-            {'ㅌ', false},
-            {'ㅍ', true},
-            {'ㅎ', false},
-            {'ㄲ', false},
+            {'ㅋ', "Origin"},
+            {'ㅌ', "Origin"},
+            {'ㅍ', "Close"},
+            {'ㅎ', "Origin"},
+            {'ㄲ', "Origin"},
 
-            {'ㄸ', false},
-            {'ㅃ', true},
-            {'ㅆ', false},
-            {'ㅉ', false}
+            {'ㄸ', "Origin"},
+            {'ㅃ', "Close"},
+            {'ㅆ', "Origin"},
+            {'ㅉ', "Origin"}
         };
 
         // 1 - 이, 2 - 에, 3 - 애, 4 - 아, 5 - 어, 6 - 오, 7 - 우, 8 - 으
-        public static readonly Dictionary<char, byte> VowelsMouseShape = new Dictionary<char, byte>()
+        public static readonly Dictionary<char, string> VowelsMouseShape = new Dictionary<char, string>()
         {
-            {'ㅏ', 0b0000_1000},
-            {'ㅐ', 0b0000_0100},
-            {'ㅑ', 0b0000_1000},
-            {'ㅒ', 0b0000_0100},
-            {'ㅓ', 0b0001_0000},
+            {'ㅏ', "ㅏ"},
+            {'ㅐ', "ㅐ"},
+            {'ㅑ', "ㅏ"},
+            {'ㅒ', "ㅐ"},
+            {'ㅓ', "ㅓ"},
 
-            {'ㅔ', 0b0000_0010},
-            {'ㅕ', 0b0001_0000},
-            {'ㅖ', 0b0000_0100},
-            {'ㅗ', 0b0010_0000},
-            {'ㅘ', 0b0000_1000},
+            {'ㅔ', "ㅔ"},
+            {'ㅕ', "ㅓ"},
+            {'ㅖ', "ㅐ"},
+            {'ㅗ', "ㅗ"},
+            {'ㅘ', "ㅏ"},
 
-            {'ㅙ', 0b0000_0100},
-            {'ㅚ', 0b0000_0100},
-            {'ㅛ', 0b0010_0000},
-            {'ㅜ', 0b0100_0000},
-            {'ㅝ', 0b0001_0000},
+            {'ㅙ', "ㅐ"},
+            {'ㅚ', "ㅐ"},
+            {'ㅛ', "ㅗ"},
+            {'ㅜ', "ㅜ"},
+            {'ㅝ', "ㅓ"},
 
-            {'ㅞ', 0b0000_0010},
-            {'ㅟ', 0b0000_0001},
-            {'ㅠ', 0b0100_0000},
-            {'ㅡ', 0b1000_0000},
-            {'ㅢ', 0b1000_0000},
+            {'ㅞ', "ㅔ"},
+            {'ㅟ', "ㅣ"},
+            {'ㅠ', "ㅜ"},
+            {'ㅡ', "ㅡ"},
+            {'ㅢ', "ㅡ"},
 
-            {'ㅣ', 0b0000_0001}
+            {'ㅣ', "ㅣ"}
         };
 
         public static readonly Dictionary<char, char> EndSound = new Dictionary<char, char>()

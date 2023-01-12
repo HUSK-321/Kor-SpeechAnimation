@@ -25,6 +25,8 @@ namespace KorSpeech.UI
 
         public void SubmitToGoogleTTS()
         {
+            Debug.Log($"{wordToPronunce.StringToPronunciation(koreanInputField.text)}");
+            outpuTextField.text = wordToPronunce.StringToPronunciation(koreanInputField.text);
             googleTTS.PlayTTSAudio(koreanInputField.text, () => {});
         }
     }

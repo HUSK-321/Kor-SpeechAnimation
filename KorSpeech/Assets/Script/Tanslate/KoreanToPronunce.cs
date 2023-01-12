@@ -1,5 +1,6 @@
 using System.Text;
 using KorSpeech.Translate.KoreanData;
+using UnityEngine;
 
 namespace KorSpeech.Translate
 {
@@ -37,7 +38,7 @@ namespace KorSpeech.Translate
             array.Append(KoreanSeong.firstSeong[first]);
             array.Append(KoreanSeong.midSeong[mid]);
 
-            if(end > 0)
+            if(end >= 0)
                 array.Append(KoreanSeong.endSeong[end]);
         }
     }
