@@ -9,7 +9,7 @@
 
 
 
-This project's goal is making kroean speeking animation. Whe user type 'Korean sentences' it will play lip animation that matches the Korean sentences.
+Project's goal is making korean speeking animation. When user type 'Korean sentences' it will play lip animation that matches the Korean sentences.
 
 | Engine             | Unity 2D (2021.3.10f1)              |
 | ------------------ | ----------------------------------- |
