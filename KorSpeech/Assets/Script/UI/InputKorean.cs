@@ -13,8 +13,6 @@ namespace KorSpeech.UI
         [SerializeField]
         private TMP_InputField koreanInputField;
         [SerializeField]
-        private TextMeshProUGUI outpuTextField;
-        [SerializeField]
         private TTS googleTTS;
         [SerializeField]
         private AnimatorLipShaper lipShaper;
@@ -25,10 +23,16 @@ namespace KorSpeech.UI
             googleTTS = GetComponent<GoogleTTS>();
         }
 
+        private void Update()
+        {
+            if(!Input.GetKeyDown(KeyCode.KeypadEnter)) return;
+
+            SubmitToGoogleTTS();
+        }
+
         public void SubmitToGoogleTTS()
         {
             string inputToPronunce = wordToPronunce.StringToPronunciation(koreanInputField.text);
-            outpuTextField.text = inputToPronunce;
             googleTTS.PlayTTSAudio(koreanInputField.text, lipShaper.StartLipShapeAnimation, inputToPronunce);
         }
     }
