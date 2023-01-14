@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using KorSpeech.Translate;
 using KorSpeech.TTSUtils;

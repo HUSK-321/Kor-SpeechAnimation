@@ -1,6 +1,7 @@
 using System.Collections;
 using System;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace KorSpeech.TTSUtils
 {
@@ -16,11 +17,19 @@ namespace KorSpeech.TTSUtils
         IEnumerator DownloadTTSFromGoogle(string text, Action<string> callback, string callbackParameter)
         {
             string googleUrl = googleTTsPrefix + text + googleTTsSuffix;
-            WWW www = new WWW(googleUrl);
+            using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(googleUrl, AudioType.MPEG))
+            {
+                yield return www.SendWebRequest();
 
-            yield return www;
-            
-            TTSAudioClip.clip = www.GetAudioClip(false, true, AudioType.MPEG);
+                if (www.result == UnityWebRequest.Result.ConnectionError)
+                {
+                    Debug.Log(www.error);
+                }
+                else
+                {
+                    TTSAudioClip.clip = DownloadHandlerAudioClip.GetContent(www);
+                }
+            }
             TTSAudioClip.Play();
             callback(callbackParameter);
         }
