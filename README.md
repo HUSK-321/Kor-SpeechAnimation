@@ -17,6 +17,10 @@ Project's goal is making korean speeking animation. When user type 'Korean sente
 | Development period | 2023.01.10 ~ 23.01.14 First Release (now doing) |
 
 
+## Introduction Video
+
+[![image](https://user-images.githubusercontent.com/68003176/214043554-82669699-5cbd-49fc-a3a6-277ae6d01170.png)](https://www.youtube.com/watch?v=Q7y7maf6NTw&t=5s)
+
 
 ## Release
 
